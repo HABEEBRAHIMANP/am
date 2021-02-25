@@ -25,10 +25,10 @@
 </head>
 <body>
 
-
+	
 	<div class="container-contact100" style="background-image: url('images/bg-01.jpg');">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form id="submit-form" class="contact100-form validate-form">
 				<h2 style="text-align: center; margin: 10px;">AL MADEENA RESIDENCY</h2>
 				<span class="contact100-form-title">
 					Feed Back
@@ -92,6 +92,25 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+</script>
+<script>
+	$("#submit-form").submit((e)=>{
+		e.preventDefault()
+		$.ajax({
+			url:"https://script.google.com/macros/s/AKfycbxLjY5MZDFFmNs0q3fjybUwDQEQVX_IaRa4RqrEgw/exec",
+			data:$("#submit-form").serialize(),
+			method:"post",
+			success:function (response){
+				alert("Your FeedBack has been submitted successfully, Thank you for connecting AL MADEENA RESIDENCY")
+				window.location.reload()
+				//window.location.href="https://google.com"
+			},
+			error:function (err){
+				alert("Something Error")
+
+			}
+		})
+	})
 </script>
 
 </body>
