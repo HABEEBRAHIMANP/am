@@ -177,7 +177,7 @@ iframe {
   font-size: 30px;
   color: #333333;
   line-height: 1.2;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: left;
   padding-bottom: 5px;
 }

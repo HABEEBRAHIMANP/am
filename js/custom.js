@@ -3,5 +3,5 @@ $('.loading').on('click',function(){
 		$btn.button('loading');
 		setTimeout(function(){
    		$btn.button('reset');
-	},2000);
+	},2500);
 });
